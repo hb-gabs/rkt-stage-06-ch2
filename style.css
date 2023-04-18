@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fav-btn-bg: #065E7C;
+    --fav-btn-bg-hover: #09465a;
+    --tb-hd-bg: #092D38;
+    --even-row-bg: #06181C;
+    --odd-row-bg: rgba(6, 22, 27, 0.5);
+    --delete-btn-txt: #F75A68;
+    --delete-btn-txt-hover: #F75A68;
+    --border-clr: #4A808C;
+    --empty-txt-clr: #4E5455;
+}
+
+#profile-img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+body {
+    width: 80%;
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: .5rem;
+}
+
+.input-wrapper button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 1.5rem;
+    background-color: var(--fav-btn-bg);
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: white;
+    gap: .5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-wrapper button:hover {
+    background-color: white;
+    color: var(--fav-btn-bg);
+}
+
+input {
+    width: 30rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border:  1px solid var(--border-clr);
+}
+
+td {
+    padding: 1rem 2rem;
+}
+
+tr:nth-child(even) {
+    background-color: var(--even-row-bg);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--odd-row-bg);
+}
+
+th {
+    background-color: var(--tb-hd-bg);
+    padding: 1rem;
+    text-align: left;
+}
+
+td:nth-child(1) {
+    display: flex;
+    gap: 1rem;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+tr button {
+    color: var(--delete-btn-txt);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+tr button:hover {
+    color: var(--delete-btn-txt-hover);
+}
+
+span {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+tbody {
+    position:  relative;
+}
+
+.empty-table {
+    min-height: 30rem;
+    border: 1px solid var(--border-clr);
+    border-top: none;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: 'Roboto mono', sans-serif;
+    font-size: 1.5rem;
+    color: var(--empty-txt-clr);
+}
+
+.empty-table img {
+    width: 10rem;
+}
